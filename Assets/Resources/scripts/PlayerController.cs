@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Move();
+	}
+	void Move(){//移動関連
 		Vector2 Position=transform.position;
 		if(Input.GetKey(KeyCode.RightArrow)){
 			Position.x+=0.1f;
@@ -17,6 +20,6 @@ public class PlayerController : MonoBehaviour {
 		if(Input.GetKey(KeyCode.LeftArrow)){
 			Position.x-=0.1f;
 		}	
-		transform.position=Position;
+		transform.position=Position;		
 	}
 }
