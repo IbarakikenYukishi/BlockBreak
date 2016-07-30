@@ -41,6 +41,7 @@ public class BlockController : MonoBehaviour {
 			GameObject prefab=Resources.Load("Prefabs/ball")as GameObject;
 			GameObject ball=Instantiate(prefab,transform.position,transform.rotation)as GameObject;
 			ball.GetComponent<BallController>().Create(Random.Range(45.0f,135.0f),2.0f);
+			ball.GetComponent<SpriteRenderer>().color=GetComponent<SpriteRenderer>().color;
 			Destroy(gameObject);
 		}
 	}
